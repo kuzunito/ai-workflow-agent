@@ -93,6 +93,13 @@
 # Docker containers for both backend and frontend
 # Ready for AWS, GCP, or Azure deployment
 
+# PROJECT INFO
+# ------------
+AUTHOR: Jofer Fernandez
+LOCATION: Calamba City, Laguna, Philippines
+CONTACT: (+63) 912-4418063 | joferf0420@gmail.com
+GITHUB: https://github.com/kuzunito
+
 build: ## Build the entire project
 	@echo "Building AI Workflow Agent..."
 	@cd backend && mvn clean package -DskipTests
@@ -105,5 +112,13 @@ run: ## Run the application
 
 test: ## Run tests
 	@cd backend && mvn test
+
+# =====================================================================
+# PROJECT INFO
+# ============
+AUTHOR: Jofer Fernandez
+LOCATION: Calamba City, Laguna, Philippines
+CONTACT: (+63) 912-4418063 | joferf0420@gmail.com
+GITHUB: https://github.com/kuzunito
 
 # =====================================================================
