@@ -1,0 +1,13 @@
+{
+  "name": "CRM Data Sync",
+  "description": "Sync data between systems every 15 minutes with AI-powered cleaning and transformation",
+  "status": "active",
+  "triggers": "schedule:15min",
+  "conditions": "source_data_changed = true",
+  "actions": "ai:clean_data,transform:data_mapping,save:postgresql,crm:upsert",
+  "aiConfig": "model:gpt-4o-mini,temperature:0.1",
+  "execution_count": 0,
+  "last_executed_at": null,
+  "created_at": "2026-10-15T02:00:00Z",
+  "version": 1
+}

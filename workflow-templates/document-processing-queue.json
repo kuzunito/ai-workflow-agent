@@ -1,0 +1,13 @@
+{
+  "name": "Document Processing Queue",
+  "description": "Route legal/healthcare documents for manual review with AI pre-classification",
+  "status": "active",
+  "triggers": "webhook:dropbox,webhook:drive,manual",
+  "conditions": "document_type IN ['contract','agreement','claim','invoice']",
+  "actions": "ai:classify_document,save:queue,move:to_approved_folder,mark_for_review",
+  "aiConfig": "model:gpt-4o-mini,temperature:0.2",
+  "execution_count": 0,
+  "last_executed_at": null,
+  "created_at": "2026-10-15T02:00:00Z",
+  "version": 1
+}

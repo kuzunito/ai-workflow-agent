@@ -1,0 +1,13 @@
+{
+  "name": "Automated Follow-up",
+  "description": "Send personalized follow-up emails to leads who haven't been contacted in 24 hours",
+  "status": "active",
+  "triggers": "schedule:daily_9am",
+  "conditions": "last_contact_date < 24 hours ago",
+  "actions": "ai:draft_email,send:gmail,update:crm_last_contact",
+  "aiConfig": "model:gpt-4o-mini,temperature:0.7",
+  "execution_count": 0,
+  "last_executed_at": null,
+  "created_at": "2026-10-15T02:00:00Z",
+  "version": 1
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Invoice Summarization",
+  "description": "Summarize raw invoice text into structured financial data for accounting entries",
+  "status": "active",
+  "triggers": "webhook:gmail,schedule:daily",
+  "conditions": "invoice_type = 'receivable' OR invoice_type = 'payable'",
+  "actions": "ai:extract_financial_data,save:accounting_entries,ai:generate_gl_code,send:email",
+  "aiConfig": "model:gpt-4o-mini,temperature:0.3",
+  "execution_count": 0,
+  "last_executed_at": null,
+  "created_at": "2026-10-15T02:00:00Z",
+  "version": 1
+}

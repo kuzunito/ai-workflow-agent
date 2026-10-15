@@ -56,3 +56,12 @@ ai-workflow-agent/
 │           └── Webhooks.js
 │
 └── build.py / build.sh                # Build scripts
+
+├── workflow-templates/
+│   ├── invoice-ocr-classification.json    # Invoice OCR + GL classification
+│   ├── lead-capture-routing.json          # Lead capture from web forms
+│   ├── automated-followup.json            # Daily follow-up for leads
+│   ├── invoice-summarization.json         # Summarize invoices for accounting
+│   ├── document-processing-queue.json     # Legal/healthcare document routing
+│   ├── crm-data-sync.json                 # 15-min CRM data sync
+│   └── customer-onboarding-bot.json       # Welcome new customers

@@ -1,0 +1,13 @@
+{
+  "name": "Invoice OCR & Classification",
+  "description": "Automatically extract invoice data, classify by GL code, and save to database when invoice arrives",
+  "status": "active",
+  "triggers": "webhook:quickbooks,webhook:gmail,schedule:daily",
+  "conditions": "invoice_amount > 5000",
+  "actions": "ai:summarize,invoice_extract:save,ai:generate_gl_code,send:email",
+  "aiConfig": "model:gpt-4o-mini,temperature:0.3",
+  "execution_count": 0,
+  "last_executed_at": null,
+  "created_at": "2026-10-15T02:00:00Z",
+  "version": 1
+}

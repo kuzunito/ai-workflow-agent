@@ -1,0 +1,13 @@
+{
+  "name": "Customer Onboarding Bot",
+  "description": "Welcome new customers, setup their account, and trigger personalized training videos",
+  "status": "active",
+  "triggers": "webhook:crm_new_customer,webhook:signup_form",
+  "conditions": "signup_type = 'premium' OR signup_type = 'enterprise'",
+  "actions": "ai:draft_welcome_email,send:email,save:crm_customer,send:telegram,add:to_training_queue",
+  "aiConfig": "model:gpt-4o-mini,temperature:0.7",
+  "execution_count": 0,
+  "last_executed_at": null,
+  "created_at": "2026-10-15T02:00:00Z",
+  "version": 1
+}

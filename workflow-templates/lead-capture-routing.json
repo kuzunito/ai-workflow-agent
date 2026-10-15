@@ -1,0 +1,13 @@
+{
+  "name": "Lead Capture & Routing",
+  "description": "Capture leads from website forms, qualify them with AI, and route to the right sales team",
+  "status": "active",
+  "triggers": "webhook:web_form,webhook:gmail,send:email,webhook:slack",
+  "conditions": "lead_source = 'web' AND lead_score >= 70",
+  "actions": "ai:qualify_lead,save:crm,send:slack_notification,send:welcome_email",
+  "aiConfig": "model:gpt-4o-mini,temperature:0.3",
+  "execution_count": 0,
+  "last_executed_at": null,
+  "created_at": "2026-10-15T02:00:00Z",
+  "version": 1
+}
